@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f9f8;
+    color: #1b1b1b;
+    line-height: 1.6;
+}
+
+
+/* MENU */
+
+header {
+    background: #063b3b;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d4af37;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+
+
+/* PRIMEIRA TELA */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    background:
+    linear-gradient(
+    rgba(6,59,59,0.85),
+    rgba(6,59,59,0.85)
+    );
+}
+
+
+.hero-content {
+    max-width: 700px;
+    color: white;
+}
+
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+
+
+/* BOTÕES */
+
+.button {
+    display: inline-block;
+    background: #d4af37;
+    color: #063b3b;
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+
+.button:hover {
+    background: #b89022;
+}
+
+
+
+/* SEÇÕES */
+
+section {
+    padding: 70px 8%;
+}
+
+
+section h2 {
+    text-align: center;
+    color: #063b3b;
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+
+section p {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+/* CARDS */
+
+.cards {
+    display: flex;
+    gap: 25px;
+    margin-top: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.card {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+
+.card h3 {
+    color: #063b3b;
+    margin-bottom: 15px;
+}
+
+
+
+/* CONTATO */
+
+#contato {
+    background: #063b3b;
+    color: white;
+}
+
+
+#contato h2 {
+    color: #d4af37;
+}
+
+
+#contato p {
+    margin-bottom: 10px;
+}
+
+
+
+/* RODAPÉ */
+
+footer {
+    background: #041f1f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+/* CELULAR */
+
+@media(max-width:768px){
+
+header {
+    flex-direction: column;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+.hero h1 {
+    font-size: 34px;
+}
+
+.hero p {
+    font-size: 17px;
+}
+
+.cards {
+    flex-direction: column;
+    align-items: center;
+}
+
+}
