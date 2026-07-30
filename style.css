@@ -209,7 +209,9 @@ nav {
 
 }
 .logo img {
-    width: 180px;
+    .logo img {
+    width: 150px;
     height: auto;
     display: block;
+}
 }
