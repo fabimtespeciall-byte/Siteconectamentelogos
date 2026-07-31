@@ -27,8 +27,8 @@ html {
 body {
   font-family: var(--fonte-corpo);
   color: var(--texto-escuro);
- background-color: #0D3B4C;
-  line-height: 1.6;
+background-color: var(--branco);
+   line-height: 1.6;
 }
 
 .container {
