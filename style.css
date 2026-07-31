@@ -27,8 +27,8 @@ html {
 body {
   font-family: var(--fonte-corpo);
   color: var(--texto-escuro);
-background-color: var(--branco);
-   line-height: 1.6;
+  background-color: var(--branco);
+  line-height: 1.6;
 }
 
 .container {
@@ -64,6 +64,9 @@ background-color: var(--branco);
   margin-bottom: 40px;
   color: #666;
   font-size: 1.05rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Botões */
@@ -145,10 +148,18 @@ background-color: var(--branco);
   font-weight: 700;
   color: var(--branco);
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 .logo span {
   color: var(--dourado);
+}
+
+.logo-img {
+  max-height: 45px;
+  width: auto;
+  display: block;
 }
 
 .nav-menu ul {
@@ -240,14 +251,16 @@ background-color: var(--branco);
   justify-content: center;
 }
 
-
-.hero-image img {
+.hero-img-element {
   width: 100%;
-  height: 320px;
-  object-fit: cover;
+  max-width: 500px;
+  height: auto;
   border-radius: 12px;
   border: 2px solid var(--dourado);
+  object-fit: cover;
 }
+
+.image-placeholder {
   width: 100%;
   height: 320px;
   border: 2px dashed var(--dourado);
@@ -339,10 +352,6 @@ background-color: var(--branco);
   border-top: 4px solid var(--dourado);
 }
 
-.diferenciais .card {
-  background-color: var(--branco);
-}
-
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 25px rgba(0,0,0,0.1);
@@ -431,6 +440,145 @@ background-color: var(--branco);
   font-style: italic;
   margin-bottom: 15px;
   color: #555;
+}
+
+/* ==========================================================================
+   ESTILOS DA NOVA SEÇÃO: IMPACTO, RESULTADOS E INDICADORES (ETAPA 3)
+   ========================================================================== */
+.impacto-institucional {
+  background-color: var(--branco);
+}
+
+/* Bloco 1: Cartões de Impacto Institucional */
+.impacto-cards-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.impacto-card {
+  background-color: var(--cinza-claro);
+  padding: 35px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid var(--dourado);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.impacto-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.impacto-card-icon {
+  font-size: 2.8rem;
+  color: var(--dourado);
+  margin-bottom: 20px;
+}
+
+.impacto-card h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--azul-petroleo);
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.impacto-card p {
+  color: var(--texto-escuro);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Bloco 2: Indicadores */
+.indicadores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.indicador-card {
+  background-color: var(--branco);
+  border: 1px solid var(--cinza-medio);
+  border-top: 4px solid var(--azul-petroleo);
+  padding: 30px 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.indicador-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.indicador-numero {
+  font-family: var(--fonte-titulo);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--dourado);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.indicador-rotulo {
+  font-family: var(--fonte-corpo);
+  color: var(--azul-petroleo);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Bloco 3: Faixa Horizontal com Efeito de Brilho */
+.faixa-impacto {
+  background-color: var(--azul-petroleo);
+  color: var(--branco);
+  padding: 50px 0;
+  text-align: center;
+}
+
+.container-faixa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 0;
+}
+
+.faixa-texto {
+  font-family: var(--fonte-titulo);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--branco);
+  max-width: 850px;
+  line-height: 1.5;
+}
+
+/* Efeito de Brilho no Botão Dourado */
+.btn-brilho {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-brilho::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: rotate(30deg) translateX(-100%);
+  transition: transform 0.8s ease;
+}
+
+.btn-brilho:hover::after {
+  transform: rotate(30deg) translateX(100%);
 }
 
 /* ==========================================================================
@@ -722,6 +870,23 @@ background-color: var(--branco);
     justify-content: center;
   }
 
+  .impacto-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .indicadores-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faixa-texto {
+    font-size: 1.15rem;
+  }
+
+  .btn-brilho {
+    width: 90%;
+    text-align: center;
+  }
+
   .form-diagnostico {
     grid-template-columns: 1fr;
   }
@@ -735,4 +900,4 @@ background-color: var(--branco);
     gap: 30px;
     text-align: center;
   }
-}
+}v
