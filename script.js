@@ -1,103 +1,75 @@
-/* ==========================================================================
-   CONECTAMENTE LOGOS - JAVASCRIPT FUNCIONAL
-   ========================================================================== */
-
+// Aguarda o carregamento do DOM
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* 1. ATUALIZAÇÃO AUTOMÁTICA DO ANO NO RODAPÉ */
-    const yearSpan = document.getElementById('year');
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-    }
+  // 1. MENU HAMBÚRGUER RESPONSIVO
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
 
-    /* 2. ELEVAÇÃO DO CABEÇALHO AO ROLAR A PÁGINA (SCROLL HEADER) */
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
     });
 
-    /* 3. MENU MOBILE HAMBÚRGUER */
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const navMenu = document.getElementById('nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
+    // Fechar menu mobile ao clicar em qualquer item
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+      });
+    });
+  }
 
-    if (mobileMenuBtn && navMenu) {
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenuBtn.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
+  // 2. HIGHLIGHT DO MENU DURANTE A ROLAGEM (SCROLLSPY)
+  const sections = document.querySelectorAll('section, footer');
+  const navLinks = document.querySelectorAll('.nav-link');
 
-        // Fechar o menu ao clicar em qualquer link
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenuBtn.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
-    }
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (pageYOffset >= (sectionTop - 150)) {
+        current = section.getAttribute('id');
+      }
+    });
 
-    /* 4. MUDANÇA DE LINK ATIVO NO MENU COM BASE NA SEÇÃO VISÍVEL (SCROLLSPY) */
-    const sections = document.querySelectorAll('section[id]');
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  });
 
-    function scrollActive() {
-        const scrollY = window.pageYOffset;
+  // 3. VALIDAÇÃO E ENVIO DO FORMULÁRIO DE DIAGNÓSTICO
+  const formDiagnostico = document.getElementById('formDiagnostico');
+  const formFeedback = document.getElementById('formFeedback');
 
-        sections.forEach(current => {
-            const sectionHeight = current.offsetHeight;
-            const sectionTop = current.offsetTop - 100;
-            const sectionId = current.getAttribute('id');
-            const link = document.querySelector(`.nav-menu a[href*=${sectionId}]`);
+  if (formDiagnostico) {
+    formDiagnostico.addEventListener('submit', (e) => {
+      e.preventDefault(); // Impede o envio padrão da página
 
-            if (link) {
-                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
-            }
-        });
-    }
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const mensagem = document.getElementById('mensagem').value.trim();
 
-    window.addEventListener('scroll', scrollActive);
+      // Validação básica
+      if (nome === '' || email === '' || mensagem === '') {
+        alert('Por favor, preencha todos os campos obrigatórios (*).');
+        return;
+      }
 
-    /* 5. ENVIO E VALIDAÇÃO DO FORMULÁRIO DE DIAGNÓSTICO */
-    const diagnosticoForm = document.getElementById('diagnosticoForm');
-    const formFeedback = document.getElementById('formFeedback');
+      // Exibe mensagem de sucesso
+      formFeedback.innerHTML = "Obrigado pelo contato! Nossa equipe analisará sua solicitação e retornará em breve.";
+      formFeedback.className = "form-feedback success";
+      
+      // Limpa os campos do formulário
+      formDiagnostico.reset();
 
-    if (diagnosticoForm) {
-        diagnosticoForm.addEventListener('submit', (e) => {
-            e.preventDefault();
+      // Oculta a mensagem após 6 segundos
+      setTimeout(() => {
+        formFeedback.className = "form-feedback";
+      }, 6000);
+    });
+  }
 
-            // Obter os valores do formulário
-            const nome = document.getElementById('nome').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const empresa = document.getElementById('empresa').value.trim();
-            const area = document.getElementById('area').value.trim();
-            const necessidade = document.getElementById('necessidade').value;
-
-            // Simulação de envio com sucesso
-            if (nome && email && empresa && area && recursiveNecessidade(necessidade)) {
-                formFeedback.className = 'form-feedback success';
-                formFeedback.innerHTML = `
-                    <strong>Obrigado, ${nome}!</strong><br>
-                    Seu diagnóstico preliminar para a área de <em>"${necessidade}"</em> foi recebido com sucesso. 
-                    Nossa equipe entrará em contato pelo e-mail <u>${email}</u> em breve.
-                `;
-
-                // Limpar formulário
-                diagnosticoForm.reset();
-
-                // Rolar suavemente até o feedback
-                formFeedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }
-        });
-    }
-
-    function recursiveNecessidade(val) {
-        return val !== '';
-    }
 });
