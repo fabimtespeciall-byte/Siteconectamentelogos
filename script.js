@@ -71,20 +71,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. ESTRUTURA PREPARADA PARA FUTURA ANIMAÇÃO DOS INDICADORES
-  // Módulo configurado para contagem animada via IntersectionObserver no futuro
+  // 4. ANIMAÇÃO DE ROLAGEM SUAVE (REVEAL ON SCROLL) PARA CARTÕES E LINHA DO TEMPO
+  const elementosAnimados = document.querySelectorAll('.timeline-item, .proposito-card, .trajetoria-card, .historia-grid');
+
+  const observarElementos = () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+          entry.target.style.opacity = '1';
+        }
+      });
+    }, { threshold: 0.15 });
+
+    elementosAnimados.forEach(el => {
+      observer.observe(el);
+    });
+  };
+
+  // 5. ESTRUTURA PREPARADA PARA FUTURA ANIMAÇÃO DOS INDICADORES
   const inicializarAnimacaoIndicadores = () => {
     const elementosIndicadores = document.querySelectorAll('.indicador-numero');
     
     if (elementosIndicadores.length === 0) return;
 
-    // Função reservada para disparar incremento contínuado de valores
     const animarContagem = (el) => {
       const valorAlvo = el.getAttribute('data-target');
-      // A animação em JS será ativada aqui quando houver integração completa de dados
+      // A animação em JS para contagem contínua pode ser acionada aqui
     };
 
-    // Observador para disparar animação apenas quando visível na tela
     const observer = new IntersectionObserver((entries, observerSelf) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -99,7 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // Executa inicialização estrutural dos indicadores
+  // Executar observadores
+  observarElementos();
   inicializarAnimacaoIndicadores();
 
 });
