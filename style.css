@@ -49,14 +49,19 @@ nav a:hover {
 /* PRIMEIRA TELA */
 
 .hero {
+   .hero {
     min-height: 85vh;
+    width: 100%;
     display: flex;
     align-items: center;
     padding: 80px 8%;
-    background:
-    linear-gradient(
-    rgba(6,59,59,0.85),
-    rgba(6,59,59,0.85)
+    background: linear-gradient(
+        rgba(6,59,59,0.85),
+        rgba(6,59,59,0.85)
+    );
+    background-size: cover;
+    background-position: center;
+}
     );
 }
 
