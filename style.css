@@ -1389,4 +1389,53 @@ body {
     gap: 30px;
     text-align: center;
   }
+   .diagnostico {
+    padding: 60px 20px;
+    background: #f5f8fa;
+    text-align: center;
+}
+
+.diagnostico h2 {
+    color: #0b4f6c;
+    font-size: 32px;
+}
+
+.diagnostico p {
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+#formDiagnostico {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#formDiagnostico input,
+#formDiagnostico select,
+#formDiagnostico textarea {
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#formDiagnostico button {
+    background: #c9a227;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#formDiagnostico button:hover {
+    opacity: 0.8;
+}
 }
