@@ -172,7 +172,7 @@ body {
   color: var(--branco);
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   transition: color 0.3s ease;
 }
 
@@ -576,13 +576,12 @@ body {
 }
 
 /* ==========================================================================
-   ESTILOS DA NOVA SEÇÃO: NOSSA HISTÓRIA, FUNDADORA E PROPÓSITO (ETAPA 4)
+   NOSSA HISTÓRIA, FUNDADORA E PROPÓSITO
    ========================================================================== */
 .nossa-historia {
   background-color: var(--cinza-claro);
 }
 
-/* Bloco 1: Foto + História */
 .historia-grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -645,7 +644,6 @@ body {
   color: var(--texto-escuro);
 }
 
-/* Bloco 2: Trajetória / Missão Pessoal */
 .trajetoria-card {
   background: linear-gradient(135deg, var(--branco) 0%, #FAF8F0 100%);
   border: 1px solid var(--cinza-medio);
@@ -683,7 +681,6 @@ body {
   line-height: 1.6;
 }
 
-/* Bloco 3: Propósito (Humanizar, Transformar, Inspirar) */
 .proposito-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -718,7 +715,6 @@ body {
   margin-bottom: 10px;
 }
 
-/* Bloco 4: Linha do Tempo (Timeline) */
 .timeline-container {
   position: relative;
   max-width: 1000px;
@@ -810,7 +806,6 @@ body {
   font-size: 0.95rem;
 }
 
-/* Bloco 5: Banner Frase de Impacto */
 .banner-historia {
   background-color: var(--azul-petroleo);
   color: var(--branco);
@@ -825,6 +820,216 @@ body {
   color: var(--dourado);
   max-width: 900px;
   line-height: 1.4;
+}
+
+/* ==========================================================================
+   ESTILOS DA SEÇÃO: NOSSA VISÃO PARA O FUTURO (ETAPA 5)
+   ========================================================================== */
+.visao-futuro {
+  background-color: var(--branco);
+}
+
+.visao-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.visao-card {
+  text-align: left;
+}
+
+.valores-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.valores-pills li {
+  background-color: var(--cinza-claro);
+  color: var(--azul-petroleo);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--cinza-medio);
+}
+
+.timeline-ano {
+  display: inline-block;
+  background-color: var(--dourado);
+  color: var(--azul-escuro);
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 3px 12px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.pilares-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.pilar-card {
+  background-color: var(--cinza-claro);
+  padding: 30px 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+  border-top: 4px solid var(--azul-petroleo);
+  transition: all 0.3s ease;
+}
+
+.pilar-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  border-top-color: var(--dourado);
+  background-color: var(--branco);
+}
+
+.pilar-icon {
+  font-size: 2.5rem;
+  color: var(--azul-petroleo);
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.pilar-card:hover .pilar-icon {
+  color: var(--dourado);
+}
+
+.pilar-card h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--azul-petroleo);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.banner-visao {
+  background-color: var(--azul-petroleo);
+  color: var(--branco);
+  padding: 55px 0;
+  text-align: center;
+}
+
+/* ==========================================================================
+   ESTILOS DA SEÇÃO: SOLUÇÕES DA CONECTAMENTE LOGOS (ETAPA 6)
+   ========================================================================== */
+.solucoes-futuro {
+  background-color: var(--cinza-claro);
+}
+
+.solucoes-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.solucao-card {
+  background-color: var(--branco);
+  padding: 30px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border-top: 4px solid var(--dourado);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.solucao-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.solucao-icon {
+  font-size: 2.2rem;
+  color: var(--azul-petroleo);
+  margin-bottom: 15px;
+}
+
+.solucao-card h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--azul-petroleo);
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.solucao-card p {
+  font-size: 0.95rem;
+  color: var(--texto-escuro);
+}
+
+/* Estrutura Comparativa (Antes x Depois) */
+.comparativo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.comparativo-card {
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.comparativo-card.antes {
+  background-color: var(--branco);
+  border-top: 5px solid #E74C3C;
+}
+
+.comparativo-card.depois {
+  background-color: var(--branco);
+  border-top: 5px solid #2ECC71;
+}
+
+.comparativo-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.comparativo-header h4 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.4rem;
+}
+
+.comparativo-card.antes .comparativo-header {
+  color: #C0392B;
+}
+
+.comparativo-card.depois .comparativo-header {
+  color: #27AE60;
+}
+
+.comparativo-header i {
+  font-size: 1.8rem;
+}
+
+.comparativo-lista {
+  list-style: none;
+}
+
+.comparativo-lista li {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.comparativo-card.antes .comparativo-lista i {
+  color: #E74C3C;
+}
+
+.comparativo-card.depois .comparativo-lista i {
+  color: #2ECC71;
+}
+
+.banner-solucoes {
+  background-color: var(--azul-petroleo);
+  color: var(--branco);
+  padding: 55px 0;
+  text-align: center;
 }
 
 /* ==========================================================================
@@ -1096,6 +1301,10 @@ body {
     flex-direction: column;
     text-align: center;
   }
+
+  .comparativo-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1130,11 +1339,13 @@ body {
 
   .impacto-cards-grid,
   .indicadores-grid,
-  .proposito-grid {
+  .proposito-grid,
+  .visao-grid,
+  .pilares-grid,
+  .solucoes-grid {
     grid-template-columns: 1fr;
   }
 
-  /* Ajustes para a Linha do Tempo em Telas Pequenas */
   .timeline::after {
     left: 20px;
   }
