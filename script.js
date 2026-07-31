@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. ANIMAÇÃO DE ROLAGEM SUAVE (REVEAL ON SCROLL) PARA CARTÕES E LINHA DO TEMPO
-  const elementosAnimados = document.querySelectorAll('.timeline-item, .proposito-card, .trajetoria-card, .historia-grid');
+  // 4. ANIMAÇÃO DE ROLAGEM SUAVE (REVEAL ON SCROLL) PARA NOVOS CARTÕES E TIMELINES
+  const elementosAnimados = document.querySelectorAll('.timeline-item, .proposito-card, .trajetoria-card, .historia-grid, .pilar-card, .solucao-card, .comparativo-card');
 
   const observarElementos = () => {
     const observer = new IntersectionObserver((entries) => {
