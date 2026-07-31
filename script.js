@@ -1,4 +1,4 @@
-// Aguarda o carregamento do DOM
+// Aguarda o carregamento completo do DOM
 document.addEventListener('DOMContentLoaded', () => {
 
   // 1. MENU HAMBÚRGUER RESPONSIVO
@@ -26,8 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let current = '';
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (pageYOffset >= (sectionTop - 150)) {
+      if (window.pageYOffset >= (sectionTop - 150)) {
         current = section.getAttribute('id');
       }
     });
@@ -46,19 +45,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (formDiagnostico) {
     formDiagnostico.addEventListener('submit', (e) => {
-      e.preventDefault(); // Impede o envio padrão da página
+      e.preventDefault(); // Impede o recarregamento da página
 
       const nome = document.getElementById('nome').value.trim();
       const email = document.getElementById('email').value.trim();
       const mensagem = document.getElementById('mensagem').value.trim();
 
-      // Validação básica
+      // Validação básica de campos obrigatórios
       if (nome === '' || email === '' || mensagem === '') {
         alert('Por favor, preencha todos os campos obrigatórios (*).');
         return;
       }
 
-      // Exibe mensagem de sucesso
+      // Exibe mensagem de confirmação
       formFeedback.innerHTML = "Obrigado pelo contato! Nossa equipe analisará sua solicitação e retornará em breve.";
       formFeedback.className = "form-feedback success";
       
@@ -71,5 +70,36 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 6000);
     });
   }
+
+  // 4. ESTRUTURA PREPARADA PARA FUTURA ANIMAÇÃO DOS INDICADORES
+  // Módulo configurado para contagem animada via IntersectionObserver no futuro
+  const inicializarAnimacaoIndicadores = () => {
+    const elementosIndicadores = document.querySelectorAll('.indicador-numero');
+    
+    if (elementosIndicadores.length === 0) return;
+
+    // Função reservada para disparar incremento contínuado de valores
+    const animarContagem = (el) => {
+      const valorAlvo = el.getAttribute('data-target');
+      // A animação em JS será ativada aqui quando houver integração completa de dados
+    };
+
+    // Observador para disparar animação apenas quando visível na tela
+    const observer = new IntersectionObserver((entries, observerSelf) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animarContagem(entry.target);
+          observerSelf.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    elementosIndicadores.forEach(indicador => {
+      observer.observe(indicador);
+    });
+  };
+
+  // Executa inicialização estrutural dos indicadores
+  inicializarAnimacaoIndicadores();
 
 });
