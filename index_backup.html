@@ -1,321 +1,363 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConectaMente Logos - Comunicação Humanizada, Saúde Mental e Inclusão</title>
-
-    <!-- Fonte Google Fonts (Poppins & Playfair Display) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- CSS Externo -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConectaMente Logos | Comunicação, Saúde Mental e Inclusão</title>
+  
+  <!-- Tipografia Premium Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Ícones Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS Principal -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- CABEÇALHO / MENU DE NAVEGAÇÃO -->
-    <header class="header" id="header">
-        <div class="container header-container">
-            <a href="#inicio" class="logo">
-                <span class="logo-text">ConectaMente</span>
-                <span class="logo-sub">Logos</span>
-            </a>
+  <!-- CABEÇALHO / MENU DE NAVEGAÇÃO -->
+  <header class="header">
+    <div class="container container-header">
+      <a href="#inicio" class="logo">ConectaMente <span>Logos</span></a>
+      
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="#inicio" class="nav-link">Início</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
+          <li><a href="#servicos" class="nav-link">Serviços</a></li>
+          <li><a href="#projetos" class="nav-link">Projetos</a></li>
+          <li><a href="#inclusao" class="nav-link">Inclusão</a></li>
+          <li><a href="#diagnostico" class="nav-link">Diagnóstico</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
 
-            <!-- Botão Menu Mobile -->
-            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir Menu">
-                <span class="hamburger"></span>
-            </button>
+      <button class="hamburger" id="hamburger" aria-label="Abrir Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
 
-            <!-- Navigation Menu -->
-            <nav class="nav-menu" id="nav-menu">
-                <ul>
-                    <li><a href="#inicio" class="nav-link active">Início</a></li>
-                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
-                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
-                    <li><a href="#projetos" class="nav-link">Projetos</a></li>
-                    <li><a href="#inclusao" class="nav-link">Inclusão</a></li>
-                    <li><a href="#diagnostico" class="nav-link">Diagnóstico</a></li>
-                    <li><a href="#contato" class="nav-link">Contato</a></li>
-                </ul>
-            </nav>
+  <!-- SEÇÃO 1: HERO (APRESENTAÇÃO INICIAL) -->
+  <section id="inicio" class="hero">
+    <div class="container hero-container">
+      <div class="hero-text fade-in">
+        <span class="badge-tag">Inovação, Ciência & Acolhimento</span>
+        <h1>ConectaMente Logos</h1>
+        <h2>Comunicação Humanizada, Saúde Mental e Inclusão</h2>
+        <p>Conectamos ciência, comunicação e desenvolvimento humano para transformar ambientes e relações com propósito e sensibilidade social.</p>
+        <div class="hero-btns">
+          <a href="#servicos" class="btn btn-primary">Conheça nossos projetos</a>
+          <a href="#diagnostico" class="btn btn-outline">Solicitar Diagnóstico</a>
         </div>
-    </header>
-
-    <!-- SEÇÃO HERO (INÍCIO) -->
-    <section id="inicio" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <span class="hero-badge">Comunicação Humanizada, Saúde Mental e Inclusão</span>
-            <h1 class="hero-title">ConectaMente Logos</h1>
-            <p class="hero-subtitle">Conectando pessoas, ciência e propósito para transformar ambientes.</p>
-            <div class="hero-actions">
-                <a href="#servicos" class="btn btn-primary">Conheça nossos projetos</a>
-                <a href="#diagnostico" class="btn btn-secondary">Faça um Diagnóstico</a>
-            </div>
+      </div>
+      <div class="hero-image fade-in">
+        <div class="image-placeholder">
+          <i class="fa-solid fa-people-holding-hands"></i>
+          <p><strong>Imagem Institucional</strong><br>Pessoas conectadas, diversidade, inclusão e saúde mental corporativa.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- SEÇÃO SOBRE -->
-    <section id="sobre" class="section sobre-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Quem Somos</span>
-                <h2 class="section-title">Sobre a ConectaMente Logos</h2>
-            </div>
-            <div class="sobre-content">
-                <p class="sobre-lead">
-                    A <strong>ConectaMente Logos</strong> integra comunicação, ciência e cuidado humano para desenvolver estratégias que promovem saúde mental, inclusão e relações mais conscientes.
-                </p>
-                <p class="sobre-text">
-                    Nossa atuação é fundamentada na interseção entre Psicanálise, Neurociência e Psicologia Organizacional, construindo pontes entre o desenvolvimento humano e a sustentabilidade das organizações. Atuamos ativamente na criação de ambientes corporativos e sociais mais humanos, acessíveis, empáticos e altamente colaborativos.
-                </p>
-            </div>
-
-            <!-- MISSÃO, VISÃO E VALORES -->
-            <div class="mvv-grid">
-                <div class="mvv-card">
-                    <div class="mvv-icon">🎯</div>
-                    <h3>Missão</h3>
-                    <p>Promover comunicação humanizada e estratégias de desenvolvimento humano que valorizem pessoas e organizações.</p>
-                </div>
-                <div class="mvv-card">
-                    <div class="mvv-icon">👁️</div>
-                    <h3>Visão</h3>
-                    <p>Ser referência em projetos que unem comunicação, neurociência, saúde mental e inclusão.</p>
-                </div>
-                <div class="mvv-card mvv-wide">
-                    <div class="mvv-icon">💎</div>
-                    <h3>Valores</h3>
-                    <ul class="valores-list">
-                        <li><span>•</span> Humanização</li>
-                        <li><span>•</span> Ética</li>
-                        <li><span>•</span> Inclusão</li>
-                        <li><span>•</span> Ciência</li>
-                        <li><span>•</span> Respeito à diversidade</li>
-                        <li><span>•</span> Transformação social</li>
-                    </ul>
-                </div>
-            </div>
+  <!-- SEÇÃO 2: SOBRE A CONECTAMENTE LOGOS -->
+  <section id="sobre" class="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-content fade-in">
+          <h2 class="section-title text-left">Sobre a ConectaMente Logos</h2>
+          <p class="lead">A ConectaMente Logos integra comunicação, ciência e cuidado humano para desenvolver estratégias que promovem saúde mental, inclusão e relações mais conscientes.</p>
+          <p>Unimos Psicanálise, Neurociência e Responsabilidade Social para construir ambientes corporativos, acadêmicos e comunitários mais humanos, acessíveis e altamente colaborativos.</p>
         </div>
-    </section>
+      </div>
 
-    <!-- SEÇÃO SERVIÇOS -->
-    <section id="servicos" class="section servicos-section bg-alt">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Nossas Soluções</span>
-                <h2 class="section-title">Serviços Especializados</h2>
-            </div>
-            <div class="servicos-grid">
-                <div class="card-servico">
-                    <div class="card-header">
-                        <span class="card-num">01</span>
-                        <h3>Comunicação Humanizada</h3>
-                    </div>
-                    <p>Estratégias para melhorar a comunicação interna, fortalecer o relacionamento interpessoal e consolidar uma cultura organizacional acolhedora e eficiente.</p>
-                </div>
-
-                <div class="card-servico">
-                    <div class="card-header">
-                        <span class="card-num">02</span>
-                        <h3>Saúde Mental Corporativa</h3>
-                    </div>
-                    <p>Projetos estruturados voltados ao bem-estar emocional, prevenção do burnout, acolhimento e mitigação do sofrimento psíquico no trabalho.</p>
-                </div>
-
-                <div class="card-servico">
-                    <div class="card-header">
-                        <span class="card-num">03</span>
-                        <h3>Inclusão e Acessibilidade</h3>
-                    </div>
-                    <p>Consultoria técnica e ações práticas para tornar os ambientes fisicamente e atitudinalmente acessíveis, promovendo a inclusão real de PCDs.</p>
-                </div>
-
-                <div class="card-servico">
-                    <div class="card-header">
-                        <span class="card-num">04</span>
-                        <h3>Diagnóstico Organizacional</h3>
-                    </div>
-                    <p>Análise aprofundada dos aspectos emocionais, relacionais e comunicacionais das instituições para identificar gargalos e propor melhorias.</p>
-                </div>
-
-                <div class="card-servico">
-                    <div class="card-header">
-                        <span class="card-num">05</span>
-                        <h3>Educação e Palestras</h3>
-                    </div>
-                    <p>Workshops, treinamentos e palestras interativas sobre saúde mental, diversidade, liderança empática e desenvolvimento humano continuado.</p>
-                </div>
-            </div>
+      <!-- MISSÃO, VISÃO E VALORES -->
+      <div class="mvv-grid fade-in">
+        <div class="mvv-card">
+          <div class="mvv-icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3>Missão</h3>
+          <p>Promover comunicação humanizada e estratégias de desenvolvimento humano que valorizem pessoas e organizações.</p>
         </div>
-    </section>
-
-    <!-- SEÇÃO PROJETOS DE IMPACTO SOCIAL -->
-    <section id="projetos" class="section projetos-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Transformação na Prática</span>
-                <h2 class="section-title">Projetos de Impacto Social</h2>
-            </div>
-            <div class="projetos-grid">
-                <div class="card-projeto">
-                    <div class="badge-projeto">Impacto Social</div>
-                    <h3>Saúde Mental e Inclusão</h3>
-                    <p>Ações integradas para promover a saúde psíquica aliada à garantia de oportunidades equitativas no mercado de trabalho.</p>
-                </div>
-
-                <div class="card-projeto">
-                    <div class="badge-projeto">Acessibilidade</div>
-                    <h3>Pessoa com Deficiência (PCD)</h3>
-                    <p>Iniciativas focadas na acessibilidade atitudinal e instrumental, garantindo o protagonismo e a autonomia dos colaboradores PCD.</p>
-                </div>
-
-                <div class="card-projeto">
-                    <div class="badge-projeto">Diversidade</div>
-                    <h3>Mulheres Negras</h3>
-                    <p>Programas de mentoria, liderança e suporte psíquico voltados à equidade racial e de gênero no ambiente corporativo e social.</p>
-                </div>
-
-                <div class="card-projeto">
-                    <div class="badge-projeto">Comunicação</div>
-                    <h3>Comunicação Acessível</h3>
-                    <p>Desenvolvimento de linguagens e canais inclusivos que garantem o acesso à informação para todos os perfis de públicos.</p>
-                </div>
-
-                <div class="card-projeto card-projeto-full">
-                    <div class="badge-projeto">Cultura e Conscientização</div>
-                    <h3>Documentários e Ações Sociais</h3>
-                    <p>Produção de conteúdos audiovisuais sensibilizadores e campanhas sociais para dar visibilidade a pautas humanitárias urgentes.</p>
-                </div>
-            </div>
+        <div class="mvv-card">
+          <div class="mvv-icon"><i class="fa-solid fa-eye"></i></div>
+          <h3>Visão</h3>
+          <p>Ser referência em projetos que unem comunicação, neurociência, saúde mental e inclusão social.</p>
         </div>
-    </section>
-
-    <!-- SEÇÃO INCLUSÃO E ACESSIBILIDADE -->
-    <section id="inclusao" class="section inclusao-section bg-alt">
-        <div class="container">
-            <div class="inclusao-wrapper">
-                <div class="inclusao-text">
-                    <span class="section-tag">Compromisso Ético</span>
-                    <h2 class="section-title">Área de Inclusão e Acessibilidade</h2>
-                    <p>Na ConectaMente Logos, inclusão não é apenas um conceito — é uma prática diária. Acreditamos que ambientes verdadeiramente inclusivos dependem da quebra de barreiras arquitetônicas, digitais e, principalmente, atitudinais.</p>
-                    <p>Trabalhamos ao lado das organizações para implementar ações afirmativas, letramento contínuo e adaptações acessíveis que garantam o respeito à diversidade e o sentimento de pertencimento para todas as pessoas.</p>
-                </div>
-                <div class="inclusao-box">
-                    <h3>Pilares da Nossa Atuação Inclusiva</h3>
-                    <ul>
-                        <li>✔ Letramento e Conscientização Anti-capacitista</li>
-                        <li>✔ Acessibilidade Comunicacional e Atitudinal</li>
-                        <li>✔ Acompanhamento e Retenção de Talentos Diversos</li>
-                        <li>✔ Adequação de Espaços e Processos de Seleção</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="mvv-card">
+          <div class="mvv-icon"><i class="fa-solid fa-heart"></i></div>
+          <h3>Valores</h3>
+          <ul class="valores-list">
+            <li><i class="fa-solid fa-check"></i> Humanização & Ética</li>
+            <li><i class="fa-solid fa-check"></i> Inclusão & Ciência</li>
+            <li><i class="fa-solid fa-check"></i> Respeito à Diversidade</li>
+            <li><i class="fa-solid fa-check"></i> Transformação Social</li>
+          </ul>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- SEÇÃO DIAGNÓSTICO -->
-    <section id="diagnostico" class="section diagnostico-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Avaliação Inicial</span>
-                <h2 class="section-title">Formulário de Diagnóstico</h2>
-                <p class="section-desc">Preencha os campos abaixo para receber uma avaliação preliminar das necessidades da sua instituição.</p>
-            </div>
-
-            <form class="diagnostico-form" id="diagnosticoForm">
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="nome">Nome completo *</label>
-                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">E-mail corporativo *</label>
-                        <input type="email" id="email" name="email" placeholder="seuemail@empresa.com" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="empresa">Empresa / Instituição *</label>
-                        <input type="text" id="empresa" name="empresa" placeholder="Nome da instituição" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="area">Área de atuação *</label>
-                        <input type="text" id="area" name="area" placeholder="Ex: RH, Saúde, Educação, Gestão" required>
-                    </div>
-                </div>
-
-                <div class="form-group full-width">
-                    <label for="necessidade">Principal necessidade *</label>
-                    <select id="necessidade" name="necessidade" required>
-                        <option value="" disabled selected>Selecione uma opção...</option>
-                        <option value="Saúde mental">Saúde mental</option>
-                        <option value="Comunicação interna">Comunicação interna</option>
-                        <option value="Inclusão">Inclusão</option>
-                        <option value="Acessibilidade">Acessibilidade</option>
-                        <option value="Desenvolvimento humano">Desenvolvimento humano</option>
-                    </select>
-                </div>
-
-                <div class="form-group full-width">
-                    <button type="submit" class="btn btn-primary btn-block">Enviar diagnóstico</button>
-                </div>
-                <div id="formFeedback" class="form-feedback"></div>
-            </form>
+  <!-- SEÇÃO 3: DIFERENCIAIS INSTITUCIONAIS (ETAPA 4) -->
+  <section id="diferenciais" class="diferenciais">
+    <div class="container">
+      <h2 class="section-title">Por que escolher a ConectaMente Logos?</h2>
+      <p class="section-subtitle">Apresentação institucional premium para empresas, universidades e investidores.</p>
+      
+      <div class="grid-cards">
+        <div class="card fade-in">
+          <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+          <h3>Visão Multidisciplinar</h3>
+          <p>Integração profunda de comunicação, psicologia, psicanálise, neurociência e desenvolvimento humano.</p>
         </div>
-    </section>
-
-    <!-- SEÇÃO CONTATO -->
-    <section id="contato" class="section contato-section bg-alt">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Fale Conosco</span>
-                <h2 class="section-title">Vamos construir juntos ambientes mais humanos?</h2>
-                <p class="section-desc">Entre em contato conosco através dos nossos canais oficiais de atendimento.</p>
-            </div>
-
-            <div class="contato-grid">
-                <a href="https://wa.me/5500000000000" target="_blank" class="card-contato">
-                    <div class="contato-icon">💬</div>
-                    <h3>WhatsApp</h3>
-                    <p>Fale diretamente com nossa equipe</p>
-                    <span class="contato-link">Enviar mensagem &rarr;</span>
-                </a>
-
-                <a href="https://instagram.com" target="_blank" class="card-contato">
-                    <div class="contato-icon">📸</div>
-                    <h3>Instagram</h3>
-                    <p>Acompanhe nossos conteúdos e projetos</p>
-                    <span class="contato-link">@conectamente.logos &rarr;</span>
-                </a>
-
-                <a href="mailto:contato@conectamentelogos.com.br" class="card-contato">
-                    <div class="contato-icon">✉️</div>
-                    <h3>E-mail</h3>
-                    <p>Envie sua mensagem ou proposta</p>
-                    <span class="contato-link">contato@conectamentelogos.com.br &rarr;</span>
-                </a>
-            </div>
+        <div class="card fade-in">
+          <div class="card-icon"><i class="fa-solid fa-comments"></i></div>
+          <h3>Comunicação Humanizada</h3>
+          <p>Processos de escuta qualificada que valorizam pessoas e restauram relações interpessoais.</p>
         </div>
-    </section>
-
-    <!-- RODAPÉ -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-brand">
-                <h3>ConectaMente Logos</h3>
-                <p>Comunicação Humanizada | Saúde Mental | Inclusão</p>
-            </div>
-            <div class="footer-copy">
-                <p>&copy; <span id="year"></span> ConectaMente Logos. Todos os direitos reservados.</p>
-            </div>
+        <div class="card fade-in">
+          <div class="card-icon"><i class="fa-solid fa-universal-access"></i></div>
+          <h3>Inclusão Real</h3>
+          <p>Ações efetivas de acessibilidade, equidade de gênero e inclusão de Pessoas com Deficiência (PcD).</p>
         </div>
-    </footer>
+        <div class="card fade-in">
+          <div class="card-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+          <h3>Transformação Social</h3>
+          <p>Projetos com alto impacto humano, responsabilidade ética e métricas de bem-estar social.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- JAVASCRIPT EXTERNO -->
-    <script src="script.js"></script>
+  <!-- SEÇÃO 4: SERVIÇOS -->
+  <section id="servicos" class="servicos">
+    <div class="container">
+      <h2 class="section-title">Nossos Serviços</h2>
+      <p class="section-subtitle">Soluções estratégicas para o desenvolvimento humano e corporativo.</p>
+
+      <div class="grid-cards">
+        <div class="card fade-in">
+          <div class="card-icon"><i class="fa-solid fa-users"></i></div>
+          <h3>Comunicação Humanizada</h3>
+          <p>Estratégias para melhorar a comunicação interna, fortalecer a cultura organizacional e resolver conflitos.</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          <h3>Saúde Mental Corporativa</h3>
+          <p>Programas de prevenção ao burnout, acolhimento psíquico e promoção do bem-estar no trabalho.</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon"><i class="fa-solid fa-wheelchair"></i></div>
+          <h3>Inclusão e Acessibilidade</h3>
+          <p>Consultoria técnica para adequação acessível, integração de PcDs e fomento à diversidade.</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon"><i class="fa-solid fa-chart-pie"></i></div>
+          <h3>Diagnóstico Organizacional</h3>
+          <p>Mapeamento e análise dos aspectos emocionais, relacionais e comunicacionais das instituições.</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+          <h3>Educação e Palestras</h3>
+          <p>Workshops e capacitações sobre neurociência aplicada, saúde mental, empatia e liderança humanizada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 5: PROJETOS DE IMPACTO SOCIAL & DEPOIMENTOS -->
+  <section id="projetos" class="projetos">
+    <div class="container">
+      <h2 class="section-title">Projetos de Impacto Social</h2>
+      <p class="section-subtitle">Iniciativas que transformam vidas e constroem pontes na sociedade.</p>
+
+      <div class="grid-projetos">
+        <div class="projeto-card fade-in">
+          <div class="projeto-thumb">
+            <i class="fa-solid fa-handshake-angle"></i>
+          </div>
+          <div class="projeto-content">
+            <h3>Saúde Mental & Inclusão PcD</h3>
+            <p>Ações contínuas de acolhimento e facilitação de acessibilidade para pessoas com deficiência no ambiente de trabalho.</p>
+            <a href="#diagnostico" class="btn-link">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="projeto-card fade-in">
+          <div class="projeto-thumb">
+            <i class="fa-solid fa-person-breastfeeding"></i>
+          </div>
+          <div class="projeto-content">
+            <h3>Mulheres Negras & Equidade</h3>
+            <p>Projetos de aceleração, representatividade, saúde emocional e liderança para mulheres negras.</p>
+            <a href="#diagnostico" class="btn-link">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="projeto-card fade-in">
+          <div class="projeto-thumb">
+            <i class="fa-solid fa-film"></i>
+          </div>
+          <div class="projeto-content">
+            <h3>Documentários & Ações Sociais</h3>
+            <p>Produção de materiais audiovisuais e eventos para conscientização sobre neurodiversidade e direitos sociais.</p>
+            <a href="#diagnostico" class="btn-link">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ÁREA DE DEPOIMENTOS -->
+      <div class="depoimentos-container margin-top-large">
+        <h3 class="sub-section-title">Depoimentos & Experiências</h3>
+        <div class="grid-depoimentos">
+          <div class="depoimento-card fade-in">
+            <div class="depoimento-foto"><i class="fa-solid fa-user"></i></div>
+            <p class="depoimento-texto">"Espaço reservado para depoimento institucional sobre os resultados alcançados em programas de saúde mental e inclusão."</p>
+            <h4>Nome do Parceiro</h4>
+            <span>Cargo / Instituição</span>
+          </div>
+          <div class="depoimento-card fade-in">
+            <div class="depoimento-foto"><i class="fa-solid fa-user"></i></div>
+            <p class="depoimento-texto">"Espaço reservado para relato sobre a transformação da comunicação e acolhimento nas equipes organizacionais."</p>
+            <h4>Nome do Cliente</h4>
+            <span>Empresa Parceira</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 6: INCLUSÃO E ACESSIBILIDADE -->
+  <section id="inclusao" class="inclusao">
+    <div class="container">
+      <div class="impacto-box fade-in">
+        <h2>Transformando histórias através da inclusão</h2>
+        <p>Acreditamos que a acessibilidade vai muito além da estrutura física — ela exige letramento, empatia e compromisso ético contínuo.</p>
+        <ul class="lista-impacto">
+          <li><i class="fa-solid fa-circle-check"></i> Inclusão prática de Pessoas com Deficiência (PcD)</li>
+          <li><i class="fa-solid fa-circle-check"></i> Valorização e equidade para Mulheres Negras</li>
+          <li><i class="fa-solid fa-circle-check"></i> Programas permanentes de Saúde Mental Corporativa</li>
+          <li><i class="fa-solid fa-circle-check"></i> Comunicação Institucional Clara e Acessível</li>
+        </ul>
+        <div class="tag-futuro"><i class="fa-solid fa-seedling"></i> Projetos Sociais Sustentáveis em Expansão</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 7: FORMULÁRIO DE DIAGNÓSTICO INTELIGENTE -->
+  <section id="diagnostico" class="diagnostico">
+    <div class="container">
+      <h2 class="section-title">Diagnóstico ConectaMente</h2>
+      <p class="section-subtitle">Solicite um diagnóstico das necessidades de sua instituição. Responda abaixo:</p>
+
+      <form class="form-diagnostico fade-in" id="formDiagnostico">
+        <div class="form-group">
+          <label for="nome">Nome completo *</label>
+          <input type="text" id="nome" required placeholder="Digite seu nome completo">
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail corporativo *</label>
+          <input type="email" id="email" required placeholder="seuemail@empresa.com">
+        </div>
+
+        <div class="form-group">
+          <label for="telefone">Telefone / WhatsApp</label>
+          <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+        </div>
+
+        <div class="form-group">
+          <label for="empresa">Empresa / Instituição</label>
+          <input type="text" id="empresa" placeholder="Nome da sua empresa ou instituição">
+        </div>
+
+        <div class="form-group">
+          <label for="cargo">Cargo / Função</label>
+          <input type="text" id="cargo" placeholder="Ex: Gestor de RH, Diretor, Coordenador">
+        </div>
+
+        <div class="form-group">
+          <label for="interesse">Área de interesse principal *</label>
+          <select id="interesse" required>
+            <option value="" disabled selected>Selecione uma opção</option>
+            <option value="Comunicação Institucional">Comunicação Institucional</option>
+            <option value="Saúde Mental Corporativa">Saúde Mental Corporativa</option>
+            <option value="Inclusão e Acessibilidade">Inclusão e Acessibilidade</option>
+            <option value="Palestras e Workshops">Palestras e Workshops</option>
+            <option value="Desenvolvimento Humano">Desenvolvimento Humano</option>
+          </select>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="mensagem">Descreva brevemente sua necessidade *</label>
+          <textarea id="mensagem" rows="4" required placeholder="Conte-nos sobre os desafios de sua organização..."></textarea>
+        </div>
+
+        <div class="full-width text-center">
+          <button type="submit" class="btn btn-secondary">Solicitar Diagnóstico</button>
+        </div>
+      </form>
+      <!-- Mensagem de confirmação enviada via JS -->
+      <div id="formFeedback" class="form-feedback"></div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 8: SEÇÃO AUTORIDADE, PARCEIROS & ÁREA FUTURA -->
+  <section class="autoridade-parceiros">
+    <div class="container text-center">
+      <h3 class="sub-section-title">Instituições & Credibilidade</h3>
+      <p class="section-subtitle">Preparados para parcerias com hospitais, universidades, investidores e editais públicos.</p>
+      
+      <div class="parceiros-logos fade-in">
+        <div class="partner-box">Espaço Reservado: Parcerias & Certificações</div>
+        <div class="partner-box">Espaço Reservado: Editais & Pesquisas</div>
+      </div>
+
+      <!-- PREPARAÇÃO PARA ASSISTENTE VIRTUAL E EXPANSÃO FUTURA -->
+      <div class="expansao-futura-card margin-top-large fade-in">
+        <div class="expansao-icon"><i class="fa-solid fa-robot"></i></div>
+        <div class="expansao-info">
+          <h4>Assistente Virtual Conecta (Em breve)</h4>
+          <p>Estrutura em desenvolvimento para atendimento automatizado, direcionamento de serviços e suporte inicial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+  <a href="https://wa.me/5500000000000" class="whatsapp-btn" target="_blank" aria-label="Fale conosco pelo WhatsApp" title="Fale conosco">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Fale conosco</span>
+  </a>
+
+  <!-- RODAPÉ COMPLETO (CONTATO) -->
+  <footer id="contato" class="footer">
+    <div class="container footer-container">
+      <div class="footer-info">
+        <h3>ConectaMente Logos</h3>
+        <p>Comunicação Humanizada | Saúde Mental | Inclusão</p>
+        <p class="footer-msg">"Vamos construir juntos ambientes mais humanos?"</p>
+      </div>
+
+      <div class="footer-social">
+        <h4>Conecte-se Conosco</h4>
+        <div class="social-links">
+          <a href="https://instagram.com/conectamentelogos7" target="_blank"><i class="fa-brands fa-instagram"></i> @conectamentelogos7</a>
+          <a href="https://wa.me/5500000000000" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          <a href="mailto:contato@conectamentelogos.com"><i class="fa-solid fa-envelope"></i> E-mail Institucional</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; Todos os direitos reservados. ConectaMente Logos.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript Principal -->
+  <script src="script.js"></script>
 </body>
 </html>
