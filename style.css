@@ -4,41 +4,44 @@
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f7f9f8;
-    color: #1b1b1b;
+    background: #f5f8f7;
+    color: #1c1c1c;
     line-height: 1.6;
 }
 
 
-/* MENU */
+
+/* CABEÇALHO */
 
 header {
     background: #063b3b;
-    color: white;
-    padding: 20px 8%;
+    padding: 15px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #d4af37;
+
+.logo img {
+    width: 150px;
 }
+
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
+    margin-left: 22px;
     font-size: 15px;
 }
+
 
 nav a:hover {
     color: #d4af37;
@@ -46,177 +49,307 @@ nav a:hover {
 
 
 
-/* PRIMEIRA TELA */
+/* HERO */
 
 .hero {
-   .hero {
+
     min-height: 85vh;
     width: 100%;
+
     display: flex;
     align-items: center;
+
     padding: 80px 8%;
-    background: linear-gradient(
-        rgba(6,59,59,0.85),
-        rgba(6,59,59,0.85)
+
+    background:
+    linear-gradient(
+        rgba(6,59,59,0.90),
+        rgba(6,59,59,0.90)
     );
-    background-size: cover;
-    background-position: center;
-}
-    );
+
 }
 
 
 .hero-content {
-    max-width: 700px;
+
+    max-width: 800px;
     color: white;
+
 }
 
 
 .hero h1 {
+
     font-size: 48px;
     line-height: 1.2;
     margin-bottom: 25px;
+
 }
 
 
 .hero p {
+
     font-size: 20px;
     margin-bottom: 35px;
+
 }
+
 
 
 
 /* BOTÕES */
 
 .button {
+
     display: inline-block;
+
     background: #d4af37;
+
     color: #063b3b;
+
     padding: 15px 35px;
+
     border-radius: 30px;
+
     text-decoration: none;
+
     font-weight: bold;
-    border: none;
-    cursor: pointer;
+
 }
 
 
 .button:hover {
-    background: #b89022;
+
+    background: #b99020;
+
 }
 
 
 
 /* SEÇÕES */
 
+
 section {
-    padding: 70px 8%;
+
+    padding: 80px 8%;
+
 }
+
 
 
 section h2 {
+
     text-align: center;
+
     color: #063b3b;
-    font-size: 34px;
-    margin-bottom: 30px;
+
+    font-size: 36px;
+
+    margin-bottom: 35px;
+
 }
 
 
+
 section p {
+
     max-width: 900px;
+
     margin: auto;
+
     text-align: center;
+
 }
 
 
 
 /* CARDS */
 
+
 .cards {
+
     display: flex;
-    gap: 25px;
-    margin-top: 40px;
-    justify-content: center;
+
     flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 40px;
+
 }
+
 
 
 .card {
+
     background: white;
-    padding: 30px;
+
     width: 300px;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.08);
+
 }
 
 
+
 .card h3 {
+
     color: #063b3b;
+
     margin-bottom: 15px;
+
+    text-align: center;
+
+}
+
+
+
+.card p {
+
+    font-size: 15px;
+
+}
+
+
+
+/* DIAGNÓSTICO */
+
+
+#diagnostico {
+
+    background:
+    linear-gradient(
+    135deg,
+    #063b3b,
+    #0c5757
+    );
+
+    color:white;
+
+    text-align:center;
+
+}
+
+
+#diagnostico h2 {
+
+    color:#d4af37;
+
+}
+
+
+
+#diagnostico p {
+
+    margin-bottom:35px;
+
 }
 
 
 
 /* CONTATO */
 
+
 #contato {
-    background: #063b3b;
-    color: white;
+
+    background:#063b3b;
+
+    color:white;
+
 }
 
 
 #contato h2 {
-    color: #d4af37;
+
+    color:#d4af37;
+
 }
 
 
+
 #contato p {
-    margin-bottom: 10px;
+
+    margin-bottom:10px;
+
 }
 
 
 
 /* RODAPÉ */
 
+
 footer {
-    background: #041f1f;
-    color: white;
-    text-align: center;
-    padding: 20px;
+
+    background:#041f1f;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
 }
 
 
 
 /* CELULAR */
 
+
 @media(max-width:768px){
 
+
 header {
-    flex-direction: column;
+
+    flex-direction:column;
+
 }
+
 
 nav {
-    margin-top: 20px;
+
+    margin-top:20px;
+
 }
+
+
+
+nav a {
+
+    margin:10px;
+
+}
+
+
 
 .hero h1 {
-    font-size: 34px;
+
+    font-size:34px;
+
 }
+
+
 
 .hero p {
-    font-size: 17px;
+
+    font-size:17px;
+
 }
+
 
 .cards {
-    flex-direction: column;
-    align-items: center;
-}
+
+    flex-direction:column;
+
+    align-items:center;
 
 }
-.logo img {
-    .logo img {
-    width: 150px;
-    height: auto;
-    display: block;
-}
+
+
 }
