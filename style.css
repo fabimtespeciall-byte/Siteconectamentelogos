@@ -443,13 +443,10 @@ body {
 }
 
 /* ==========================================================================
-   ESTILOS DA NOVA SEÇÃO: IMPACTO, RESULTADOS E INDICADORES (ETAPA 3)
+   IMPACTO, RESULTADOS E INDICADORES
    ========================================================================== */
-.impacto-institucional {
-  background-color: var(--branco);
-}
+.impacto-institucional { background-color: var(--branco); }
 
-/* Bloco 1: Cartões de Impacto Institucional */
 .impacto-cards-grid {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
@@ -489,7 +486,6 @@ body {
   line-height: 1.6;
 }
 
-/* Bloco 2: Indicadores */
 .indicadores-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -528,7 +524,6 @@ body {
   font-size: 0.95rem;
 }
 
-/* Bloco 3: Faixa Horizontal com Efeito de Brilho */
 .faixa-impacto {
   background-color: var(--azul-petroleo);
   color: var(--branco);
@@ -554,7 +549,6 @@ body {
   line-height: 1.5;
 }
 
-/* Efeito de Brilho no Botão Dourado */
 .btn-brilho {
   position: relative;
   overflow: hidden;
@@ -579,6 +573,258 @@ body {
 
 .btn-brilho:hover::after {
   transform: rotate(30deg) translateX(100%);
+}
+
+/* ==========================================================================
+   ESTILOS DA NOVA SEÇÃO: NOSSA HISTÓRIA, FUNDADORA E PROPÓSITO (ETAPA 4)
+   ========================================================================== */
+.nossa-historia {
+  background-color: var(--cinza-claro);
+}
+
+/* Bloco 1: Foto + História */
+.historia-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  align-items: center;
+  background-color: var(--branco);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.fundadora-foto-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fundadora-foto {
+  width: 100%;
+  max-width: 350px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid var(--dourado);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.fundadora-placeholder {
+  width: 100%;
+  max-width: 350px;
+  height: 380px;
+  border: 2px dashed var(--dourado);
+  border-radius: 12px;
+  background-color: var(--cinza-claro);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: var(--azul-petroleo);
+}
+
+.fundadora-placeholder i {
+  font-size: 4rem;
+  color: var(--dourado);
+  margin-bottom: 15px;
+}
+
+.historia-texto h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--azul-petroleo);
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.historia-texto p {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  color: var(--texto-escuro);
+}
+
+/* Bloco 2: Trajetória / Missão Pessoal */
+.trajetoria-card {
+  background: linear-gradient(135deg, var(--branco) 0%, #FAF8F0 100%);
+  border: 1px solid var(--cinza-medio);
+  border-left: 6px solid var(--dourado);
+  padding: 35px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.trajetoria-icon {
+  font-size: 3rem;
+  color: var(--dourado);
+  background-color: rgba(212, 175, 55, 0.15);
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trajetoria-content h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--azul-petroleo);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.trajetoria-content p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Bloco 3: Propósito (Humanizar, Transformar, Inspirar) */
+.proposito-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.proposito-card {
+  background-color: var(--branco);
+  padding: 35px 25px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border-top: 4px solid var(--azul-petroleo);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proposito-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.proposito-icon {
+  font-size: 2.8rem;
+  color: var(--dourado);
+  margin-bottom: 15px;
+}
+
+.proposito-card h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--azul-petroleo);
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+/* Bloco 4: Linha do Tempo (Timeline) */
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: var(--dourado);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+  border-radius: 2px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  background-color: var(--branco);
+  border: 4px solid var(--azul-petroleo);
+  top: 25px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item.right::after {
+  left: -10px;
+}
+
+.timeline-content {
+  padding: 25px;
+  background-color: var(--branco);
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border-top: 3px solid var(--azul-petroleo);
+}
+
+.timeline-tag {
+  display: inline-block;
+  background-color: var(--azul-petroleo);
+  color: var(--dourado);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.timeline-content h4 {
+  font-family: var(--fonte-titulo);
+  color: var(--azul-petroleo);
+  font-size: 1.15rem;
+  margin-bottom: 5px;
+}
+
+.timeline-content p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Bloco 5: Banner Frase de Impacto */
+.banner-historia {
+  background-color: var(--azul-petroleo);
+  color: var(--branco);
+  padding: 55px 0;
+  text-align: center;
+}
+
+.banner-texto {
+  font-family: var(--fonte-titulo);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--dourado);
+  max-width: 900px;
+  line-height: 1.4;
 }
 
 /* ==========================================================================
@@ -840,6 +1086,18 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+@media (max-width: 992px) {
+  .historia-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .trajetoria-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 @media (max-width: 768px) {
   .hamburger { display: block; }
 
@@ -870,15 +1128,35 @@ body {
     justify-content: center;
   }
 
-  .impacto-cards-grid {
+  .impacto-cards-grid,
+  .indicadores-grid,
+  .proposito-grid {
     grid-template-columns: 1fr;
   }
 
-  .indicadores-grid {
-    grid-template-columns: 1fr;
+  /* Ajustes para a Linha do Tempo em Telas Pequenas */
+  .timeline::after {
+    left: 20px;
   }
 
-  .faixa-texto {
+  .timeline-item {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 10px;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+    text-align: left;
+  }
+
+  .timeline-item::after {
+    left: 10px;
+  }
+
+  .faixa-texto,
+  .banner-texto {
     font-size: 1.15rem;
   }
 
@@ -900,4 +1178,4 @@ body {
     gap: 30px;
     text-align: center;
   }
-}v
+}
