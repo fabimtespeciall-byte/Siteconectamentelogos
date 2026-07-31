@@ -119,3 +119,14 @@ document.addEventListener('DOMContentLoaded', () => {
   inicializarAnimacaoIndicadores();
 
 });
+const formulario = document.getElementById("formDiagnostico");
+
+if (formulario) {
+    formulario.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        alert("Obrigado pelo contato! A equipe ConectaMente Logos entrará em contato.");
+
+        formulario.reset();
+    });
+}
