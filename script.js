@@ -129,4 +129,20 @@ if (formulario) {
 
         formulario.reset();
     });
+  /* ==========================================
+   ETAPA 9 & 10 — ENVIO DO DIAGNÓSTICO HUMANIZADO
+   ========================================== */
+const formDiagnosticoHumanizado = document.getElementById("formDiagnostico");
+
+if (formDiagnosticoHumanizado) {
+    formDiagnosticoHumanizado.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Alerta de envio bem-sucedido
+        alert("Obrigado por preencher o Diagnóstico Organizacional Humanizado! A equipe ConectaMente Logos analisará as informações e entrará em contato em breve.");
+
+        // Limpa o formulário após o envio
+        formDiagnosticoHumanizado.reset();
+    });
+}
 }
