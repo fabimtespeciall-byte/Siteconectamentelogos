@@ -1438,4 +1438,188 @@ body {
 #formDiagnostico button:hover {
     opacity: 0.8;
 }
+   /* ==========================================
+   ETAPA 9 — ESTILOS DO DIAGNÓSTICO HUMANIZADO
+   ========================================== */
+.diagnostico {
+    padding: 70px 20px;
+    background-color: #f4f7f9;
+    color: #333;
+}
+
+.diagnostico h2 {
+    color: #0b4f6c;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.diagnostico-intro {
+    max-width: 750px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.form-humanizado {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid #c9a227;
+}
+
+.form-group {
+    border: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.form-group legend {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0b4f6c;
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid #eef2f5;
+    padding-bottom: 8px;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+}
+
+.input-grid input,
+.input-outro,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.input-grid input:focus,
+.input-outro:focus,
+.form-group textarea:focus {
+    border-color: #0b4f6c;
+    outline: none;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 10px;
+}
+
+.checkbox-card,
+.radio-card {
+    background: #f9fbfd;
+    padding: 12px 15px;
+    border-radius: 6px;
+    border: 1px solid #e1e8ed;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.checkbox-card:hover,
+.radio-card:hover {
+    background: #eef5f9;
+    border-color: #0b4f6c;
+}
+
+.checkbox-card input,
+.radio-card input {
+    accent-color: #0b4f6c;
+    width: 16px;
+    height: 16px;
+}
+
+.input-outro {
+    margin-top: 12px;
+}
+
+.btn-diagnostico {
+    width: 100%;
+    background-color: #c9a227;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-diagnostico:hover {
+    background-color: #b08d1e;
+}
+
+/* ==========================================
+   ETAPA 10 — RODAPÉ INSTITUCIONAL & RESPONSIVIDADE
+   ========================================== */
+.footer-institucional {
+    background-color: #0b4f6c;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 4px solid #c9a227;
+}
+
+.footer-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.footer-content p {
+    font-size: 14px;
+    color: #d1e3ec;
+    margin-bottom: 15px;
+}
+
+.footer-content .copyright {
+    font-size: 12px;
+    color: #9bbccb;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+/* AJUSTES RESPONSIVOS (CELULAR E TABLET) */
+@media (max-width: 768px) {
+    .diagnostico {
+        padding: 40px 15px;
+    }
+
+    .form-humanizado {
+        padding: 20px 15px;
+    }
+
+    .options-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .diagnostico h2 {
+        font-size: 26px;
+    }
+
+    .btn-diagnostico {
+        font-size: 16px;
+    }
+}
 }
